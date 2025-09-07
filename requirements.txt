@@ -10,6 +10,7 @@ filelock==3.18.0
 Flask==3.1.2
 fonttools==4.58.0
 fsspec==2025.5.1
+gunicorn==23.0.0
 hf-xet==1.1.5
 huggingface-hub==0.33.2
 idna==3.10
