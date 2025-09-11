@@ -3,16 +3,23 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('index.html')
+def aboutme():
+    return render_template('aboutme.html')
 
-@app.route('/contacto')
-def contacto():
-    return render_template('contacto.html')
-@app.route('/lenguajes')
-def lenguaje():
-    lenguajes_programacion=("php","python","java","C#","Javascript","perl",
-    "ruby","rust")
-    return render_template('/lenguajes.html', lenguajes=lenguajes_programacion)
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/portfolio')
+def portfolio():
+    lenguajes_programacion = (
+        "php", "python", "java", "C#", "Javascript", "perl", "ruby", "rust"
+    )
+    return render_template('portfolio.html', lenguajes=lenguajes_programacion)
+@app.route('/sg.html')
+def santiagog():
+    return render_template('sg.html')
+
 if __name__ == '__main__':
-    app.run(debug=True,port=5017)
+    app.run(debug=True, port=5017)
+
